@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Menu - FOOD FOR FUDDESS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* --- Custom Properties (Variables) for easy theme management --- */
+        :root {
+            --primary-color: #ffb100; /* A warmer, richer yellow/gold */
+            --dark-color: #2c3e50;    /* A softer, more professional dark blue/grey */
+            --light-color: #f8f9fa;
+            --font-headings: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/subtle-white-feathers.png");
+            color: #333;
+        }
+
+        /* --- Typography & Headings --- */
+        h1, h2, h3, h4, h5, .card-title, .navbar-brand {
+            font-family: var(--font-headings);
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        /* --- Navbar Styling --- */
+        .navbar {
+            background-color: rgba(44, 62, 80, 0.95) !important;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .nav-link {
+            transition: color 0.3s ease;
+        }
+        .navbar .nav-link:hover, .navbar .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        .navbar-brand {
+            color: var(--primary-color) !important;
+        }
+
+        /* --- Card Styling --- */
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-text {
+            flex-grow: 1;
+        }
+
+        /* --- Custom Button --- */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6a000; /* A slightly darker shade for hover */
+            border-color: #e6a000;
+            color: var(--dark-color);
+        }
+
+        /* --- Carousel --- */
+        .carousel-item img {
+            border-radius: 15px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--dark-color);
+            padding: 40px 20px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">FOOD FOR FUDDESS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dish.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Menu Content -->
+    <div class="container my-5 py-5">
+        <h1 class="text-center mb-5 display-4">Our Main Menu</h1>
+
+        <!-- Food Cards Section -->
+        <div class="row justify-content-center g-4">
+            <!-- Chicken Biryani -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/01/Chicken-Biryani.jpg"
+                        class="card-img-top" alt="Chicken Biryani">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Chicken Biryani</h5>
+                        <p class="card-text">
+                            A luxurious delight of marinated chicken and basmati rice, slow-cooked to perfection with fragrant spices.
+                        </p>
+                        <a href="login.html" class="btn btn-primary mt-auto">Order Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Butter Chicken -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <img src="https://static01.nyt.com/images/2024/10/29/multimedia/Butter-Chickenrex-tbvz/Butter-Chickenrex-tbvz-mediumSquareAt3X.jpg"
+                        class="card-img-top" alt="Butter Chicken">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Butter Chicken</h5>
+                        <p class="card-text">
+                            Tender chicken in a creamy, buttery tomato curry. A rich and flavorful classic loved by all.
+                        </p>
+                        <a href="login.html" class="btn btn-primary mt-auto">Order Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Matar Paneer -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100">
+                    <img src="https://i0.wp.com/onewholesomemeal.com/wp-content/uploads/2020/08/IMG_6082-3667-2.jpg?fit=864%2C1080&ssl=1"
+                        class="card-img-top" alt="Matar Paneer">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Matar Paneer</h5>
+                        <p class="card-text">
+                            A comforting curry with soft paneer cubes and sweet green peas in a savory tomato-based sauce.
+                        </p>
+                        <a href="login.html" class="btn btn-primary mt-auto">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Section for Sides -->
+        <div class="my-5 pt-5">
+            <h2 class="text-center mb-4 display-5">Sides & Breads</h2>
+            <div id="carouselExample" class="carousel slide mx-auto shadow-lg" data-bs-ride="carousel" style="max-width: 600px; border-radius: 15px;">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://media.istockphoto.com/id/1449429511/photo/green-lacha-chilli-paratha.jpg?s=612x612&w=0&k=20&c=uxo7Xv4mY9ieG6gEU-FDr1V6qzGnbtzgIXmygTLD2yU="
+                            class="d-block w-100" alt="Butter Naan">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.istockphoto.com/id/1292638493/photo/butter-naan-isolated-over-a-rustic-wooden-background-selective-focus.jpg?s=612x612&w=0&k=20&c=weTxYo0XeF80qzG4hJ0Lf6ZUbuZ9yT2pEdOxVaRUQCA="
+                            class="d-block w-100" alt="Garlic Naan">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+             <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-link text-decoration-none" style="color: var(--dark-color);"><i class="fas fa-arrow-left me-2"></i>Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center">
+        <div class="container">
+            <div class="social-icons mb-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-yelp"></i></a>
+            </div>
+            <p class="mb-0">© 2025 FOOD FOR FUDDESS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
